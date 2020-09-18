@@ -1,0 +1,15 @@
+name: Workflow manual
+
+on: 
+  workflow_dispatch
+
+jobs:
+  build:
+    name: Dispatch to another manual workflow
+    runs-on: ubuntu-latest
+    steps:
+      - name: Emit repository_dispatch
+        uses: mvasigh/dispatch-action@main
+        with:
+          token: ${{ secrets.ACCESS_TOKEN }}
+          event_type: run_another_workflow
