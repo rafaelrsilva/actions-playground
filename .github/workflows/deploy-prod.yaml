@@ -14,10 +14,12 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    steps:
+    
+    env:
+      VERTICAL: ${{ github.event.client_payload.message.vertical }}
+      FLAVOR: ${VERTICAL}-production
 
+    steps:
       - name: Check arguments
-        env:
-          VERTICAL: ${{ github.event.client_payload.message.vertical }}
         run: |
           echo VERTICAL: ${VERTICAL}
