@@ -1,0 +1,13 @@
+name: Deploy - Sandbox
+
+on:
+  repository_dispatch:
+    type: deploy_sandbox
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      
+      - name: Run a one-line script
+        run: echo Sandbox deploy soon!

@@ -1,15 +1,16 @@
-name: Workflow manual
+name: Concursos - Sandbox
 
-on: 
+on:
   workflow_dispatch
 
 jobs:
-  build:
-    name: Dispatch to another manual workflow
+  trigger:
+    name: Trigger workflow responsible for sandbox deploy
     runs-on: ubuntu-latest
+
     steps:
-      - name: Emit repository_dispatch
+      - name: Trigger workflow
         uses: mvasigh/dispatch-action@main
         with:
           token: ${{ secrets.ACCESS_TOKEN }}
-          event_type: run_another_workflow
+          event_type: deploy_sandbox
