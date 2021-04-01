@@ -23,3 +23,4 @@ jobs:
       - name: Check arguments
         run: |
           echo VERTICAL: ${VERTICAL}
+          echo FLAVOR: ${FLAVOR}
