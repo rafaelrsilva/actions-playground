@@ -1,0 +1,20 @@
+name: Deploy - Produção
+
+on:
+  repository_dispatch:
+    types: [
+      deploy_concursos_prod,
+      deploy_juridicas_prod,
+      deploy_medicina_prod,
+      deploy_militares_prod,
+      deploy_oab_prod,
+      deploy_vestibulares_prod,
+    ]
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+
+      - name: Run a one-line script
+        run: echo Prod deploy soon!

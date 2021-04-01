@@ -1,0 +1,20 @@
+name: Deploy - Release Candidate
+
+on:
+  repository_dispatch:
+    types: [
+      deploy_concursos_rc,
+      deploy_juridicas_rc,
+      deploy_medicina_rc,
+      deploy_militares_rc,
+      deploy_oab_rc,
+      deploy_vestibulares_rc,
+    ]
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+
+      - name: Run a one-line script
+        run: echo RC deploy soon!

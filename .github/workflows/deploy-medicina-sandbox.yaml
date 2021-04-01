@@ -1,4 +1,4 @@
-name: Concursos - Sandbox
+name: Medicina - Sandbox
 
 on:
   workflow_dispatch
@@ -13,4 +13,4 @@ jobs:
         uses: mvasigh/dispatch-action@main
         with:
           token: ${{ secrets.ACCESS_TOKEN }}
-          event_type: deploy_concursos_sandbox
+          event_type: deploy_medicina_sandbox

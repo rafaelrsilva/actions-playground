@@ -2,12 +2,19 @@ name: Deploy - Sandbox
 
 on:
   repository_dispatch:
-    type: deploy_sandbox
+    types: [
+      deploy_concursos_sandbox,
+      deploy_juridicas_sandbox,
+      deploy_medicina_sandbox,
+      deploy_militares_sandbox,
+      deploy_oab_sandbox,
+      deploy_vestibulares_sandbox,
+    ]
 
 jobs:
   build:
     runs-on: macos-latest
     steps:
-      
+
       - name: Run a one-line script
         run: echo Sandbox deploy soon!
