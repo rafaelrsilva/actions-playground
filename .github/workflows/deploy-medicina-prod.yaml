@@ -1,4 +1,4 @@
-name: Medicina - Sandbox
+name: Medicina - Produção
 
 on:
   workflow_dispatch 

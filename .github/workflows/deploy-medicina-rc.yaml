@@ -1,4 +1,4 @@
-name: Medicina - Sandbox
+name: Medicina - Release Candidate
 
 on:
   workflow_dispatch 

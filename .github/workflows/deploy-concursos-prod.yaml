@@ -1,4 +1,4 @@
-name: Concursos - Sandbox
+name: Concursos - Produção
 
 on:
   workflow_dispatch
