@@ -16,5 +16,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-      - name: Run a one-line script
-        run: echo Sandbox deploy soon!
+      - name: Check arguments
+        env:
+          VERTICAL: ${{ github.event.client_payload.message.vertical }}
+          FB_TOKEN: ${{ github.event.client_payload.message.firebase_token }}
+          FB_IOS_APP: ${{ github.event.client_payload.message.firebase_ios_app }}
+          FB_ANDROID_APP: ${{ github.event.client_payload.message.firebase_android_app }}
+          FB_GROUP: ${{ github.event.client_payload.message.firebase_group }}
+        run: |
+          echo VERTICAL: ${VERTICAL}
+          echo FB_TOKEN: ${FB_TOKEN}
+          echo FB_IOS_APP: ${FB_IOS_APP}
+          echo FB_ANDROID_APP: ${FB_ANDROID_APP}
+          echo FB_GROUP: ${FB_GROUP}

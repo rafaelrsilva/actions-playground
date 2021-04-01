@@ -14,3 +14,11 @@ jobs:
         with:
           token: ${{ secrets.ACCESS_TOKEN }}
           event_type: deploy_medicina_sandbox
+          message: |
+            {
+              "vertical": "medicina",
+              "firebase_token": "medicina-sandbox-this-is-fake-firebase-token",
+              "firebase_ios_app": "medicina-sandbox-this-is-a-fake-firebase-ios-app",
+              "firebase_android_app": "medicina-sandbox-this-is-a-fake-firebase-android-app",
+              "firebase_group": "medicina-sandbox-this-is-a-fake-firebase-group",
+            }

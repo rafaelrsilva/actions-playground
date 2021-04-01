@@ -5,7 +5,7 @@ on:
 
 jobs:
   trigger:
-    name: Trigger workflow responsible for sandbox deploy
+    name: Trigger workflow responsible for rc deploy
     runs-on: ubuntu-latest
 
     steps:
@@ -14,3 +14,11 @@ jobs:
         with:
           token: ${{ secrets.ACCESS_TOKEN }}
           event_type: deploy_concursos_rc
+          message: |
+            {
+              "vertical": "concursos",
+              "firebase_token": "concursos-rc-this-is-fake-firebase-token",
+              "firebase_ios_app": "concursos-rc-this-is-a-fake-firebase-ios-app",
+              "firebase_android_app": "concursos-rc-this-is-a-fake-firebase-android-app",
+              "firebase_group": "concursos-rc-this-is-a-fake-firebase-group",
+            }

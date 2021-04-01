@@ -16,5 +16,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-      - name: Run a one-line script
-        run: echo Prod deploy soon!
+      - name: Check arguments
+        env:
+          VERTICAL: ${{ github.event.client_payload.message.vertical }}
+        run: |
+          echo VERTICAL: ${VERTICAL}
