@@ -17,7 +17,7 @@ jobs:
     
     env:
       VERTICAL: ${{ github.event.client_payload.message.vertical }}
-      FLAVOR: "${VERTICAL}-production"
+      FLAVOR: "${{ env.VERTICAL}}-production"
 
     steps:
       - name: Check arguments
