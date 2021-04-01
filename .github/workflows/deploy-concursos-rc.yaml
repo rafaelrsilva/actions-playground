@@ -1,7 +1,9 @@
 name: Concursos - Release Candidate
 
 on:
-  workflow_dispatch
+  workflow_dispatch:
+  push:
+    tags: 'rc[0-9]+.[0-9]+.[0-9]+'
 
 jobs:
   trigger:
