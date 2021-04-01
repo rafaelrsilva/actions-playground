@@ -20,5 +20,5 @@ jobs:
               "firebase_token": "concursos-sandbox-this-is-fake-firebase-token",
               "firebase_ios_app": "concursos-sandbox-this-is-a-fake-firebase-ios-app",
               "firebase_android_app": "concursos-sandbox-this-is-a-fake-firebase-android-app",
-              "firebase_group": "concursos-sandbox-this-is-a-fake-firebase-group",
+              "firebase_group": "concursos-sandbox-this-is-a-fake-firebase-group"
             }
