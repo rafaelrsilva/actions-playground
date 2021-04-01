@@ -1,0 +1,16 @@
+name: Concursos - Sandbox
+
+on:
+  workflow_dispatch
+
+jobs:
+  trigger:
+    name: Trigger workflow responsible for sandbox deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Trigger workflow
+        uses: mvasigh/dispatch-action@main
+        with:
+          token: ${{ secrets.ACCESS_TOKEN }}
+          event_type: deploy_concursos_rc
