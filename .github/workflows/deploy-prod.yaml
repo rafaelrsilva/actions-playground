@@ -17,7 +17,8 @@ jobs:
     
     env:
       VERTICAL: ${{ github.event.client_payload.message.vertical }}
-      FLAVOR: "${{ env.VERTICAL}}-production"
+      SHA: ${{ github.sha }}
+      COMMIT: ${{ github.event.client_payload.message.commit }}
 
     steps:
       - name: Check arguments

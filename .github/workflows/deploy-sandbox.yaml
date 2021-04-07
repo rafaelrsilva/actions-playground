@@ -23,6 +23,8 @@ jobs:
           FB_IOS_APP: ${{ github.event.client_payload.message.firebase_ios_app }}
           FB_ANDROID_APP: ${{ github.event.client_payload.message.firebase_android_app }}
           FB_GROUP: ${{ github.event.client_payload.message.firebase_group }}
+          SHA: ${{ github.sha }}
+          COMMIT: ${{ github.event.client_payload.message.commit }}
         run: |
           echo VERTICAL: ${VERTICAL}
           echo FB_TOKEN: ${FB_TOKEN}

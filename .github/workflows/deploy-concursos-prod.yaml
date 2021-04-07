@@ -25,5 +25,6 @@ jobs:
           ref: other
           message: |
             {
+              "commit": ${{ github.sha }}
               "vertical": "concursos"
             }

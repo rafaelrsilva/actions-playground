@@ -16,6 +16,7 @@ jobs:
           event_type: deploy_medicina_sandbox
           message: |
             {
+              "commit": ${{ github.sha }},
               "vertical": "medicina",
               "firebase_token": "medicina-sandbox-this-is-fake-firebase-token",
               "firebase_ios_app": "medicina-sandbox-this-is-a-fake-firebase-ios-app",
