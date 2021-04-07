@@ -10,10 +10,12 @@ jobs:
     name: Trigger workflow responsible for sandbox deploy
     runs-on: ubuntu-latest
 
+
+
     steps:
 
       - name: Check env
-        run: echo ${GITHUB_REF}
+        run: echo "$GITHUB_REF"
 
       - name: Trigger workflow
         uses: mvasigh/dispatch-action@main
