@@ -14,17 +14,17 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    steps:
 
+    env:
+      VERTICAL: ${{ github.event.client_payload.message.vertical }}
+      FB_TOKEN: ${{ github.event.client_payload.message.firebase_token }}
+      FB_IOS_APP: ${{ github.event.client_payload.message.firebase_ios_app }}
+      FB_ANDROID_APP: ${{ github.event.client_payload.message.firebase_android_app }}
+      FB_GROUP: ${{ github.event.client_payload.message.firebase_group }}
+      COMMIT: ${{ github.event.client_payload.message.commit }}
+
+    steps:
       - name: Check arguments
-        env:
-          VERTICAL: ${{ github.event.client_payload.message.vertical }}
-          FB_TOKEN: ${{ github.event.client_payload.message.firebase_token }}
-          FB_IOS_APP: ${{ github.event.client_payload.message.firebase_ios_app }}
-          FB_ANDROID_APP: ${{ github.event.client_payload.message.firebase_android_app }}
-          FB_GROUP: ${{ github.event.client_payload.message.firebase_group }}
-          SHA: ${{ github.sha }}
-          COMMIT: ${{ github.event.client_payload.message.commit }}
         run: |
           echo VERTICAL: ${VERTICAL}
           echo FB_TOKEN: ${FB_TOKEN}
@@ -34,6 +34,7 @@ jobs:
 
       - uses: actions/checkout@v2
         with:
+          ref: ${{ env.COMMIT }}
           persist-credentials: false
 
       - name: Content

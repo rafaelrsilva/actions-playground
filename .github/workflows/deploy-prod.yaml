@@ -27,6 +27,7 @@ jobs:
 
       - uses: actions/checkout@v2
         with:
+          ref: ${{ env.COMMIT }}
           persist-credentials: false
 
       - name: Content
