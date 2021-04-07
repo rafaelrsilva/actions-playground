@@ -15,7 +15,7 @@ jobs:
     steps:
 
       - name: Check env
-        run: echo "$GITHUB_REF"
+        run: echo "$GITHUB_SHA"
 
       - name: Trigger workflow
         uses: mvasigh/dispatch-action@main
