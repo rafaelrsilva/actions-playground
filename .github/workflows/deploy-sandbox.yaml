@@ -29,3 +29,6 @@ jobs:
           echo FB_IOS_APP: ${FB_IOS_APP}
           echo FB_ANDROID_APP: ${FB_ANDROID_APP}
           echo FB_GROUP: ${FB_GROUP}
+
+      - name: Content
+        run: ls
