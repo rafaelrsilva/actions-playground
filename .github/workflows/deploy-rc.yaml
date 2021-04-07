@@ -31,3 +31,10 @@ jobs:
           echo FB_IOS_APP: ${FB_IOS_APP}
           echo FB_ANDROID_APP: ${FB_ANDROID_APP}
           echo FB_GROUP: ${FB_GROUP}
+
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: Content
+        run: ls

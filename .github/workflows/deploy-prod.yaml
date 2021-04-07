@@ -17,7 +17,6 @@ jobs:
     
     env:
       VERTICAL: ${{ github.event.client_payload.message.vertical }}
-      SHA: ${{ github.sha }}
       COMMIT: ${{ github.event.client_payload.message.commit }}
 
     steps:
@@ -25,3 +24,10 @@ jobs:
         run: |
           echo VERTICAL: ${VERTICAL}
           echo FLAVOR: ${FLAVOR}
+
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: Content
+        run: ls
