@@ -13,13 +13,14 @@ jobs:
     steps:
 
       - name: Check env
-        run: echo ${{ github.event.client_payload }}
+        run: echo ${{ github.event.client_payload.ref }}
 
       - name: Trigger workflow
         uses: mvasigh/dispatch-action@main
         with:
           token: ${{ secrets.ACCESS_TOKEN }}
           event_type: deploy_concursos_prod
+          ref: other
           message: |
             {
               "vertical": "concursos"
