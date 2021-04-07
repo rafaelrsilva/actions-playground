@@ -18,6 +18,6 @@ jobs:
           event_type: deploy_medicina_prod
           message: |
             {
-              "commit": ${{ github.sha }},
+              "commit": "${{ github.sha }}",
               "vertical": "medicina"
             }

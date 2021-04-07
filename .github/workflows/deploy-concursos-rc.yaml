@@ -18,6 +18,7 @@ jobs:
           event_type: deploy_concursos_rc
           message: |
             {
+              "commit": "${{ github.sha }}",
               "vertical": "concursos",
               "firebase_token": "concursos-rc-this-is-fake-firebase-token",
               "firebase_ios_app": "concursos-rc-this-is-a-fake-firebase-ios-app",

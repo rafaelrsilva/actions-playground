@@ -16,7 +16,7 @@ jobs:
           event_type: deploy_concursos_sandbox
           message: |
             {
-              "commit": ${{ github.sha }},
+              "commit": "${{ github.sha }}",
               "vertical": "concursos",
               "firebase_token": "concursos-sandbox-this-is-fake-firebase-token",
               "firebase_ios_app": "concursos-sandbox-this-is-a-fake-firebase-ios-app",

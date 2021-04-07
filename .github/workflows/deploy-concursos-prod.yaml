@@ -9,13 +9,7 @@ jobs:
   trigger:
     name: Trigger workflow responsible for sandbox deploy
     runs-on: ubuntu-latest
-
-
-
     steps:
-
-      - name: Check env
-        run: echo "$GITHUB_SHA"
 
       - name: Trigger workflow
         uses: mvasigh/dispatch-action@main
@@ -25,6 +19,6 @@ jobs:
           ref: other
           message: |
             {
-              "commit": ${{ github.sha }}
+              "commit": "${{ github.sha }}",
               "vertical": "concursos"
             }
