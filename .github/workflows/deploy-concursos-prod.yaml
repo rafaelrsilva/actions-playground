@@ -13,7 +13,7 @@ jobs:
     steps:
 
       - name: Check env
-        run: echo ${{ github.event.client_payload.ref }}
+        run: echo ${GITHUB_REF}
 
       - name: Trigger workflow
         uses: mvasigh/dispatch-action@main
